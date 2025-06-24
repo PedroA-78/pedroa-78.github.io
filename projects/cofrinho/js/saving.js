@@ -37,6 +37,8 @@ function createGoal(name, amount) {
     }
     goals.push(newGoal)
     saveGoals(goals)
+
+    return newGoal.id
 }
 
 function addValue(id, value) {
@@ -86,6 +88,9 @@ function setHistory(goal, value) {
 
 function getHistory() {
     const goal = getActiveGoal()
+
+    if (!goal) return
+
     const history = goal.history
 
     const registers = history.map(register => register ? {

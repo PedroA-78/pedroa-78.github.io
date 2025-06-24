@@ -47,7 +47,8 @@ function setupActions() {
 
         if (isNaN(amount) || amount <= 0) return
 
-        createGoal(goal, parseFloat(amount))
+        const id = createGoal(goal, parseFloat(amount))
+        document.querySelector('.active_goal').value = id
 
         inputMap['goal_name'].value = ''
         inputMap['goal_amount'].value = ''

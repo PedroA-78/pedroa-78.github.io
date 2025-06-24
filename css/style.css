@@ -34,6 +34,7 @@ section {
 
 span.tag {
     display: inline-block;
+    margin: 1px 0;
     padding: 0 8px;
     border-radius: 12px;
     color: var(--background);
@@ -430,4 +431,146 @@ footer li {
 footer li a {
     text-decoration: none;
     color: inherit;
+}
+
+
+/* ===============================
+   Telas pequenas (celulares)
+   =============================== */
+@media (max-width: 480px) {
+  /* Ajustes para celulares pequenos (iPhone SE, Galaxy mini, etc) */
+
+    /* HEADER */
+
+    header, footer {
+        max-width: 100%;
+        top: 0;
+        left: 0;
+        padding: 0 1rem;
+        overflow: hidden;
+    }
+
+    header {
+        position: fixed;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    /* MAIN */
+
+    /* SECTION (PRESENTATION) */
+
+    .presentation,
+    .about {
+        width: 100%;
+        margin: 7rem auto 1rem;
+        padding: 1rem;
+        display: block;
+        text-align: center;
+    }
+
+    .presentation .illustration img {
+        display: none;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* SECTION (ABOUT) */
+
+    .about {
+        margin: 1rem auto;
+    }
+
+    .about .paragraph h2 {
+        text-align: left;
+    }
+
+    .about .paragraph p {
+        text-align: center;
+    }
+
+    /* SECTION (ACADEMIC) */
+
+    .academic,
+    .certificate,
+    .projects,
+    .contact {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .academic_cards {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate {
+        padding: 1rem 0 0;
+    }
+
+    .certificate p {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* SECTION (PROJECTS) */
+
+    .projects_cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* SECTION (CONTACT) */
+
+    .contact {
+        display: block;
+    }
+
+    .contact p {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contact form input {
+        padding: .8rem .5rem;
+    }
+
+    .form_group input:focus ~ label,
+    .form_group input:not(:placeholder-shown) ~ label {
+        padding: 0 2px;
+        transform: translate(2px, -2rem);
+        font-size: 14px;
+        color: var(--primary);
+        background-color: var(--background);
+    }
+
+    .contact form button {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* ===============================
+   Telas médias (celulares grandes)
+   =============================== */
+@media (max-width: 768px) {
+  /* Ajustes para smartphones grandes (Galaxy S, iPhone Plus, etc) */
+}
+
+/* ===============================
+   Telas intermediárias (tablets)
+   =============================== */
+@media (max-width: 1024px) {
+  /* Ajustes para tablets em modo retrato/paisagem */
+}
+
+/* ===============================
+   Telas grandes (já está pronto)
+   =============================== */
+@media (min-width: 1025px) {
+  /* Você pode deixar em branco ou colocar refinamentos finais para desktop */
 }

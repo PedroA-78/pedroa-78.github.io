@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Conversor de Moedas</h1>
+    </header>
+    <main>
+        <section class="currency">
+            <p><span>1</span> Dólar americarno igual a</p>
+            <p>5,54 Real brasileiro</p>
+        </section>
+        <section class="conversion">
+            <div>
+                <input type="number" id="fromAmount">
+                <select name="" id="fromCurrency">
+                    <option value="USD">Dólar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="BRL">Real</option>
+                </select>
+            </div>
+            <div>
+                <input type="number" id="toAmount" readonly>
+                <select name="" id="toCurrency">
+                    <option value="USD">Dólar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="BRL">Real</option>
+                </select>
+            </div>
+        </section>
+        <section class="fonts">
+            <p>15 de junho, 10:05 UTC - De Curreny</p>
+        </section>
+    </main>
+    <footer>
+        <p> Desenvolvido por <span>Pedro Aurelio Ramos</span> 🚀💻 • 2025</p>
+    </footer>
+
+    <div class="money"></div>
+
+    <script src="./js/emoji.js" defer></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

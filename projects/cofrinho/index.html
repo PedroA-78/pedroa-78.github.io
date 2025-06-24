@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofrinho</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>...</header>
+
+    <main>
+        <section class="dashboard">
+            <div class="progress">
+                <div class="coin">
+                    <img src="./assets/coin2.png" alt="">
+                </div>
+                <span class="coin_shadow"></span>
+            </div>
+            <div class="dashboard_text">
+                <p class="amount">R$0 <span>economizados</span></p>
+            </div>
+        </section>
+        <section class="actions">
+            <button id="history" data-modal="modal_history">Histórico</button>
+            <button id="manage" data-modal="modal_manage">Gerenciar metas</button>
+            <button id="add" data-modal="modal_add">Adicionar valor</button>
+            <button id="goal" data-modal="modal_goal">Definir meta</button>
+        </section>
+    </main>
+
+    <div class="modal" id="modal_history">
+        <span class="modal_overlay"></span>
+        <div class="modal_content">
+            <h2>Histórico</h2>
+            <button class="modal_close" aria-label="Fechar modal">&times;</button>
+            <ul class="history_list">
+            </ul>
+            <p class="no_registers">Nenhum registro encontrado!</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_manage">
+        <span class="modal_overlay"></span>
+        <div class="modal_content">
+            <h2>Gerenciar metas</h2>
+            <button class="modal_close" aria-label="Fechar modal">&times;</button>
+            <ul class="goals_list">
+            </ul>
+            <p class="no_registers">Nenhum registro encontrado!</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_add">
+        <span class="modal_overlay"></span>
+        <div class="modal_content">
+            <h2>Adicionar valor</h2>
+            <button class="modal_close">&times;</button>
+            <input type="number" placeholder="Quanto você quer guardar?" min="0" data-input="add">
+            <input type="hidden" class="active_goal">
+            <div class="modal_actions">
+                <button data-action="add">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_goal">
+        <span class="modal_overlay"></span>
+        <div class="modal_content">
+            <h2>Definir meta</h2>
+            <button class="modal_close" aria-label="Fechar modal">&times;</button>
+            <input type="text" placeholder="Qual é a sua meta" maxlength="40" data-input="goal_name">
+            <input type="number" placeholder="Quanto o valor da sua meta?" min="0" data-input="goal_amount">
+            <div class="modal_actions">
+                <button data-action="save">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="stars"></div>
+
+    <div class="clouds">
+        <div class="cloud" style="top: 52%; left: 18%; transform: scale(1.4);"></div>
+        <div class="cloud" style="top: 18%; left: 53%; transform: scale(1.2);"></div>
+        <div class="cloud" style="top: 11%; left: 78%; transform: scale(1.6);"></div>
+        <div class="cloud" style="top: 33%; left: 28%; transform: scale(1.4);"></div>
+        <div class="cloud" style="top: 85%; left: 83%; transform: scale(1.6);"></div>
+        <div class="cloud" style="top: 17%; left: 11%; transform: scale(1.2);"></div>
+        <div class="cloud" style="top: 57%; left: 74%; transform: scale(1.2);"></div>
+        <div class="cloud" style="top: 72%; left: 47%; transform: scale(1);"></div>
+    </div>
+
+
+    <footer>...</footer>
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/manage.js"></script>
+    <!-- <script src="/js/saving.js"></script> -->
+</body>
+</html>

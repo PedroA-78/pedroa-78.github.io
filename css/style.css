@@ -21,12 +21,15 @@ html, body {
     background-color: var(--background);
     font-family: 'Inter', 'Poppins', sans-serif;
     color: var(--main-text);
+    scroll-behavior: smooth;
 }
 
 section {
     max-width: 1280px;
     width: 75%;
-    margin: 0 auto;
+    margin: 3em auto;
+    box-sizing: border-box;
+    scroll-margin-top: 120px;
 }
 
 span.tag {
@@ -57,6 +60,14 @@ span.others {
 }
 
 /* HEADER */
+
+header {
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
 
 header,
 footer {
@@ -108,6 +119,11 @@ header li:hover::after {
 
 header li:last-child {
     margin-right: 0;
+}
+
+header li a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* MAIN */
@@ -177,6 +193,10 @@ header li:last-child {
 
 /* SECTION (ABOUT) */
 
+.about {
+    margin-bottom: 5rem;
+}
+
 .about .paragraph h2,
 .about .paragraph p {
     text-align: right;
@@ -208,6 +228,10 @@ header li:last-child {
     color: #777;
 }
 
+.certificate {
+    margin: 3em auto;
+}
+
 /* SECTION (PROJECTS) */
 
 .projects_cards {
@@ -219,7 +243,7 @@ header li:last-child {
 .project {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: space-between;
     padding: 8px 12px;
     border-radius: 8px;
     border: 2px solid var(--primary);
@@ -276,12 +300,13 @@ header li:last-child {
 /* SECTION (CONTACT) */
 
 .contact {
-    margin: 0 auto;
+    margin: 3em auto;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 60% 1fr;
     gap: 0 16px;
     align-items: unset;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .contact h2 {
@@ -400,4 +425,9 @@ footer li {
     padding: 4px;
     font-size: 16px;
     cursor: pointer;
+}
+
+footer li a {
+    text-decoration: none;
+    color: inherit;
 }

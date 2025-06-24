@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +14,10 @@
         </h1>
         <nav>
             <ul>
-                <li>Sobre Mim</li>
-                <li>Formação</li>
-                <li>Projetos</li>
-                <li>Contato</li>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#academic">Formação</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -31,7 +31,7 @@
                 <img src="/assets/undraw_static-assets_di5m.svg">
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="illustration">
                 <img src="/assets/undraw_programming_65t2.svg">
             </div>
@@ -40,7 +40,7 @@
                 <p>Desde criança sempre tive curiosidade por computadores, mas foi em 2019, durante o curso técnico de informática, que descobri minha paixão pela programação. Trabalho com HTML, CSS, JavaScript, PHP, Laravel, Vue e SQL, buscando sempre criar aplicações funcionais e bem pensadas. Um dos projetos que mais gostei de desenvolver foi um sistema de contagem de estoque para uma padaria local, onde pude aplicar meus conhecimentos para resolver um problema real. Estou em busca de um estágio onde eu possa evoluir como desenvolvedor e contribuir com soluções práticas e eficientes.</p>
             </div>
         </section>
-        <section class="academic ">
+        <section class="academic" id="academic">
             <h2>🎓 Formação Acadêmica</h2>
             <div class="academic_cards">
                 <div class="academic_card">
@@ -55,10 +55,12 @@
                 </div>
             </div>
 
-            <h2>📜 Certificações</h2>
-            <p>Estou em constante aprendizado e pretendo adquirir certificações em desenvolvimento web e frameworks modernos nos próximos meses.</p>
+            <div class="certificate">
+                <h2>📜 Certificações</h2>
+                <p>Estou em constante aprendizado e pretendo adquirir certificações em desenvolvimento web e frameworks modernos nos próximos meses.</p>
+            </div>
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <h2>💼 Projetos</h2>
             <div class="projects_cards">
                 <div class="project">
@@ -75,35 +77,25 @@
                     <div class="preview">
                         <img src="">
                     </div>
-                    <h3>To-Do List (Lista de Tarefas)</h3>
-                    <p>Aplicação para organização de tarefas diárias com criação, marcação e exclusão de atividades. Os dados são mantidos no localStorage para persistência entre sessões.</p>
-                    <p><span class="bold">Tecnologias</span>: <span class="tag html">HTML</span>, <span class="tag css">CSS</span>, <span class="tag js">JavaScript</span></p>
-                    <p><span class="bold">Destaque</span>: Prática de manipulação de arrays, eventos e armazenamento local.</p>
-                    <a href="#">Ver projeto</a>
-                </div>
-                <div class="project">
-                    <div class="preview">
-                        <img src="">
-                    </div>
                     <h3>Conversor de Moedas com API</h3>
-                    <p>Projeto que consome dados em tempo real de uma API de câmbio para converter valores entre diferentes moedas.</p>
+                    <p>Projeto que converte valores entre moedas em tempo real, utilizando uma API de câmbio para obter taxas atualizadas.</p>
                     <p><span class="bold">Tecnologias</span>: <span class="tag html">HTML</span>, <span class="tag css">CSS</span>, <span class="tag js">JavaScript</span>, <span class="tag others">Fetch API</span></p>
                     <p><span class="bold">Destaque</span>: Integração com API externa e tratamento de dados dinâmicos.</p>
-                    <a href="#">Ver projeto</a>
+                    <a href="/projects/conversor/index.html" target="_blank">Ver projeto</a>
                 </div>
                 <div class="project">
                     <div class="preview">
                         <img src="">
                     </div>
                     <h3>App de Cofrinho (Controle de Gastos Pessoais)</h3>
-                    <p>Aplicativo para registrar entradas e saídas de dinheiro, permitindo o acompanhamento de economia pessoal.</p>
-                    <p><span class="bold">Tecnologias</span>: <span class="tag html">HTML</span>, <span class="tag css">CSS</span>, <span class="tag js">JavaScript</span></p>
-                    <p><span class="bold">Destaque</span>: Uso de lógica condicional, manipulação de dados e criação de uma interface intuitiva para controle financeiro.</p>
-                    <a href="#">Ver projeto</a>
+                    <p>Aplicativo gamificado para registrar entradas e saídas de dinheiro, acompanhar metas de economia e visualizar o progresso de forma interativa.</p>
+                    <p><span class="bold">Tecnologias</span>: <span class="tag html">HTML</span>, <span class="tag css">CSS</span>, <span class="tag js">JavaScript</span>, <span class="tag others">localStorage</span></p>
+                    <p><span class="bold">Destaque</span>: Interface divertida com lógica de metas, animações, armazenamento local e visualização do progresso financeiro.</p>
+                    <a href="/projects/cofrinho/index.html" target="_blank">Ver projeto</a>
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2>📬 Entre em Contato</h2>
             <p>Se você gostou do meu trabalho e quer conversar sobre oportunidades, parcerias ou só trocar uma ideia sobre desenvolvimento web, fique à vontade para me chamar! Estou sempre aberto a novos desafios e conexões. 💬</p>
             <form action="#" method="post">
@@ -130,10 +122,10 @@
         </h2>
         <nav>
             <ul>
-                <li>Sobre Mim</li>
-                <li>Formação</li>
-                <li>Projetos</li>
-                <li>Contato</li>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#academic">Formação</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </footer>

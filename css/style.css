@@ -64,9 +64,10 @@ span.others {
 
 header {
     width: 100%;
-    position: fixed; 
+    position: sticky; 
     top: 0;
     left: 0;
+    z-index: 1000;
     box-sizing: border-box;
 }
 
@@ -87,8 +88,9 @@ header h1 {
     color: var(--primary);
 }
 
-header ul {
+.links {
     display: flex;
+    align-items: center;
     padding: 0;
     list-style-type: none;
 }
@@ -127,6 +129,46 @@ header li a {
     color: inherit;
 }
 
+.hamburger {
+    position: relative;
+    width: 24px;
+    height: 12px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+    transition: ease-in-out 300ms;
+}
+
+.hamburger span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hamburger span:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.hamburger span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* transform: translateY(-50%); */
+}
+
 /* MAIN */
 
 /* SECTION (PRESENTATION) */
@@ -135,7 +177,7 @@ header li a {
 .about,
 .contact {
     width: 75%;
-    margin: 10em auto;
+    margin: 5em auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -190,6 +232,8 @@ header li a {
 .presentation .illustration img,
 .about .illustration img {
     width: 100%;
+    min-width: 300px;
+    max-width: 427px;
 }
 
 /* SECTION (ABOUT) */
@@ -433,12 +477,9 @@ footer li a {
     color: inherit;
 }
 
+/* RESPONSIVENESS */
 
-/* ===============================
-   Telas pequenas (celulares)
-   =============================== */
-@media (max-width: 480px) {
-  /* Ajustes para celulares pequenos (iPhone SE, Galaxy mini, etc) */
+@media (max-width: 1024px) {
 
     /* HEADER */
 
@@ -447,16 +488,100 @@ footer li a {
         top: 0;
         left: 0;
         padding: 0 1rem;
-        overflow: hidden;
     }
 
-    header {
-        position: fixed;
-    }
-
-    header nav {
+    .links {
         display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100vh;
+        margin: 0;
+        padding: 1.4rem 3rem 1.4rem 1rem;
+        flex-direction: column;
+        background-color: var(--background);
+        box-sizing: border-box;
+        z-index: 10;
     }
+
+    .links.show {
+        display: flex;
+        animation: slideIn ease-in-out 300ms forwards;
+    }
+
+    @keyframes slideIn {
+        from {
+            right: -60%;
+        }
+
+        to {
+            right: 0;
+        }
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 10;
+        transition: 300ms ease-in-out;
+        pointer-events: all;
+    }
+
+    .hamburger.show span:nth-child(1) {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .hamburger.show span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+    .hamburger.show span:nth-child(3) {
+        opacity: 0;
+    }
+
+    /* .hamburger.show::before {
+        top: unset;
+        left: 0;
+    }
+
+    .hamburger.show::after {
+        top: unset;
+        bottom: unset;
+        transform: rotate(-90deg);
+    } */
+
+    .overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .6);
+    }
+
+    .overlay.show {
+        display: block;
+    }
+
+    header li {
+        margin: 0;
+    }
+
+    /* MAIN */
+
+    .presentation, .about,
+    .academic, .projects,
+    .contact {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 768px) {
 
     /* MAIN */
 
@@ -465,7 +590,7 @@ footer li a {
     .presentation,
     .about {
         width: 100%;
-        margin: 7rem auto 1rem;
+        margin: 2rem auto 1rem;
         padding: 1rem;
         display: block;
         text-align: center;
@@ -484,43 +609,17 @@ footer li a {
     }
 
     .about .paragraph h2 {
-        text-align: left;
+        text-align: center;
     }
 
     .about .paragraph p {
         text-align: center;
     }
 
-    /* SECTION (ACADEMIC) */
-
-    .academic,
-    .certificate,
-    .projects,
-    .contact {
-        width: 100%;
-        margin: 0 auto;
-        padding: 1rem;
-        box-sizing: border-box;
-    }
-
-    .academic_cards {
-        grid-template-columns: 1fr;
-    }
-
-    .certificate {
-        padding: 1rem 0 0;
-    }
-
-    .certificate p {
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-    }
-
     /* SECTION (PROJECTS) */
 
     .projects_cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     /* SECTION (CONTACT) */
@@ -554,23 +653,39 @@ footer li a {
     }
 }
 
-/* ===============================
-   Telas médias (celulares grandes)
-   =============================== */
-@media (max-width: 768px) {
-  /* Ajustes para smartphones grandes (Galaxy S, iPhone Plus, etc) */
-}
+@media (max-width: 480px) {
 
-/* ===============================
-   Telas intermediárias (tablets)
-   =============================== */
-@media (max-width: 1024px) {
-  /* Ajustes para tablets em modo retrato/paisagem */
-}
+    /* MAIN */
 
-/* ===============================
-   Telas grandes (já está pronto)
-   =============================== */
-@media (min-width: 1025px) {
-  /* Você pode deixar em branco ou colocar refinamentos finais para desktop */
+    /* SECTION (ACADEMIC) */
+
+    .academic,
+    .certificate,
+    .projects,
+    .contact {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .academic_cards {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate {
+        padding: 1rem 0 0;
+    }
+
+    .certificate p {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* SECTION (PROJECTS) */
+
+    .projects_cards {
+        grid-template-columns: 1fr;
+    }
 }

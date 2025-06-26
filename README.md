@@ -1,4 +1,4 @@
-# 👨‍💻 Portfólio Pessoal - Pedro Aurélio Ramos
+# 👨‍💻 Portfólio Pessoal - Pedro Aurelio Ramos
 
 Este é o meu portfólio pessoal desenvolvido com foco em design moderno, responsividade e experiência do usuário. Aqui você encontra informações sobre mim, minha formação, projetos desenvolvidos e formas de contato.
 
@@ -47,12 +47,12 @@ Sou estudante de Análise e Desenvolvimento de Sistemas, com formação técnica
 
 ## 📫 Contato
 
-Você pode entrar em contato comigo diretamente pelo [formulário na seção de contato do portfólio](https://pedroa-78.github.io/#contact) ou via redes sociais listadas lá.
+Você pode entrar em contato comigo diretamente pelo [formulário na seção de contato do portfólio](https://pedroa-78.github.io/#contact).
 
 ---
 
 ## 🧑‍💻 Autor
 
-Feito com dedicação por **Pedro Aurélio Ramos**
+Feito com dedicação por **Pedro Aurelio Ramos**
 
 [![GitHub](https://img.shields.io/badge/GitHub--%23121011?style=flat&logo=github&logoColor=white)](https://github.com/pedroa-78)

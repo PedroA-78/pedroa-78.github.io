@@ -247,6 +247,15 @@ header li a {
     text-align: right;
 }
 
+.about .paragraph p {
+    margin: .5rem 0;
+}
+
+.about .paragraph p span {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
 /* SECTION (ACADEMIC) */
 
 .academic_cards {
@@ -496,9 +505,11 @@ footer li a {
         top: 0;
         right: 0;
         width: 60%;
-        height: 100vh;
+        max-width: 280px;
+        height: 100vmax;
         margin: 0;
-        padding: 1.4rem 3rem 1.4rem 1rem;
+        padding: 1.4rem 3rem 1.4rem 1.2rem;
+        align-items: normal;
         flex-direction: column;
         background-color: var(--background);
         box-sizing: border-box;
@@ -541,17 +552,6 @@ footer li a {
     .hamburger.show span:nth-child(3) {
         opacity: 0;
     }
-
-    /* .hamburger.show::before {
-        top: unset;
-        left: 0;
-    }
-
-    .hamburger.show::after {
-        top: unset;
-        bottom: unset;
-        transform: rotate(-90deg);
-    } */
 
     .overlay {
         display: none;
